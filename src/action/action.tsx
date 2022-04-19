@@ -6,12 +6,12 @@
 export const ADD_CART = "ADD_CART" as const;
 export const DELETE_CART = "DELETE_CART" as const;
 
-export const addCART = (itemId: string) => {
+export const addCART = (itemId: any) => {
   return {
     type: ADD_CART,
     payload: {
       itemId,
-      quantity: 1,
+      id: Date.now,
     },
   };
 };
